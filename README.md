@@ -19,3 +19,8 @@ if (!context) {
   throw new Error("useCount must be used within a CountProvider");
 } // Verifica se não existe um contexto, provavelmente se não existir, é porque não existe um **Provider** por volta do **App**
 ```
+
+### **Referências: **
+
+[FreeCodeCamp](https://www.freecodecamp.org/news/react-context-in-5-minutes/)
+[Medium](https://medium.com/reactbrasil/entendendo-a-context-api-do-react-criando-um-componente-de-loading-a84f84007dc7)
