@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import ThemeProvider from "./context/Theme";
+import CountProvider from "./context/Count";
+
+import Container from "./components/Container";
+import Counter from "./components/Counter";
+import Mirror from "./components/Mirror";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <CountProvider>
+        <Container>
+          <header className="App-header">
+            <Counter />
+
+            <hr />
+
+            <Mirror />
+          </header>
+        </Container>
+      </CountProvider>
+    </ThemeProvider>
   );
 }
 
